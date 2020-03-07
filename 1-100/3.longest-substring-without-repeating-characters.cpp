@@ -1,7 +1,7 @@
 class Solution {
 public:
     int lengthOfLongestSubstring(const string& s) {
-        map<char, int> mapChrIdx;
+        unordered_map<char, int> mapChrIdx;
         int nMaxLen = 0;
         int nChrBeg = -1;
         int nChrIdx = 0;
