@@ -4,12 +4,13 @@ class Solution:
         numDict = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
         preNum = 0
         curNum = 0
-        for c in reversed(s):
+        for c in s:
             curNum = numDict.get(c, 0)
-            if curNum < preNum:
-                ret -= curNum
+            if preNum < curNum:
+                ret -= preNum
             else:
-                ret += curNum
-                preNum = curNum
-        
+                ret += preNum
+            preNum = curNum
+        ret += preNum
+
         return ret
