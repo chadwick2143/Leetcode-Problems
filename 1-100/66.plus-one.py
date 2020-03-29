@@ -1,6 +1,5 @@
 class Solution:
     def plusOne(self, digits: List[int]) -> List[int]:
-        nCarry = 1
         nIdx = len(digits) - 1
         while nIdx >= 0:
             digits[nIdx] += 1
